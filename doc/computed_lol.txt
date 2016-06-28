@@ -1,0 +1,41 @@
+Relevant models:
+Student - an individual student
+Teacher - an individual teacher
+School - an individual school
+StudentRecord - the academic record of a particular student
+
+
+1)
+Model: School
+Type: constant(s)
+Description: Constant for credits needed to graduate
+Constants:
+CREDITS_FOR_GRADUATION = 180
+
+
+2)
+Model: School
+Type: class method
+Attribute name: credits_for_standing
+Parameters: integer of class standing (1-4)
+Expected output: integer
+Description: Given a class standing, returns number of credits required to be of that standing (credits are evenly split)
+
+
+3)
+Model: Student
+Type: instance method
+Attribute name: can_graduate
+Parameters: n/a
+Expected output: boolean
+Description: Whether the particular student has enough credits to graduate from school
+
+
+4)
+Model: Student
+Type: instance method
+Attribute name: teachers_who_teach_math
+Parameters: n/a
+Expected output: array of teachers
+Description: All of the student's teachers who teach math
+
