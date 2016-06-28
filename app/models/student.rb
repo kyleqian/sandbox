@@ -4,6 +4,6 @@ class Student < ApplicationRecord
   has_one :student_record
 
   def can_graduate
-    return self.tudent_record.credits >= School::CREDITS_FOR_GRADUATION
+    return student_record.credits >= School::CREDITS_FOR_GRADUATION
   end
 end
