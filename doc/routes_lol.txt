@@ -1,0 +1,5 @@
+GET /teachers
+GET /students
+GET /students/:id
+
+POST /students/:id/ask_question
