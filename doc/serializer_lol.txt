@@ -2,7 +2,7 @@
 Volunteer: Kyle Qian
 Action: teacher#index
 Output:
-{
+[
   id,
   name,
   subject,
@@ -11,11 +11,12 @@ Output:
     id,
     name
   },
-  students -> {
+  students -> [
     id,
     name
-  }
-}
+  [
+]
+
 
 2)
 Volunteer: David Lee
