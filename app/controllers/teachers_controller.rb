@@ -1,5 +1,6 @@
 class TeachersController < ApplicationController
 	def index
-		render json: {'hello' => 'world!'}
+		teachers = Teacher.all
+		render json: teachers, each_serializer: TeacherSerializer
 	end
 end

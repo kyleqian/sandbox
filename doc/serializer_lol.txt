@@ -1,0 +1,29 @@
+1)
+Volunteer: Kyle Qian
+Action: teacher#index
+Output:
+{
+  id,
+  name,
+  subject,
+  image_url,
+  school -> {
+    id,
+    name
+  },
+  students -> {
+    id,
+    name
+  }
+}
+
+2)
+Volunteer: David Lee
+Action: student#ask
+Output:
+{
+  id,
+  name,
+  year,
+  can_graduate?
+}

@@ -1,0 +1,34 @@
+Models
+  School
+    name - string
+
+  Teacher
+    name - string
+    subject - string
+
+  Student
+    name - string
+    year - integer
+
+  StudentRecord
+    comments - text
+    date started - date
+    credits - integer
+
+  StudentTeacherPair
+
+Relationships
+  School has many Teachers
+  School has many Students
+
+  Teacher belongs to School
+  Teacher has many StudentTeacherPairs
+
+  Student belongs to School
+  Student has many StudentTeacherPairs
+  Student has one StudentRecord
+
+  StudentRecord belongs to Student
+
+  StudentTeacherPair belongs to Student
+  StudentTeacherPair belongs to Teacher
