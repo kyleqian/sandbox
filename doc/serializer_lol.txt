@@ -6,7 +6,6 @@ Output:
   id,
   name,
   subject,
-  image_url,
   school -> {
     id,
     name

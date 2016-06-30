@@ -1,4 +1,4 @@
-class TeacherSerializer < ActiveModel::Serializer  
+class TeacherIndexSerializer < ActiveModel::Serializer  
   belongs_to :school
   has_many :students
 
