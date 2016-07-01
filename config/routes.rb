@@ -4,6 +4,6 @@ Rails.application.routes.draw do
 	resources :teachers, only: [:index]
 	resources :students, only: [:index, :show]
 
-	post '/students/:id/ask_question' => 'students#ask'
+	put '/students/:id/submit' => 'students#submit'
 
 end

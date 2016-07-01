@@ -5,7 +5,7 @@ class StudentsController < ApplicationController
 	def show
 	end
 
-	def ask
+	def submit
     student = Student.find(params[:id])
     render json: student, serializer: StudentAskSerializer
 	end
