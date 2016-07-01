@@ -1,6 +1,6 @@
 1)
 Volunteer: Kyle Qian
-Action: teacher#index
+Action: teachers#index
 Output:
 [
   id,
@@ -19,7 +19,7 @@ Output:
 
 2)
 Volunteer: David Lee
-Action: student#ask
+Action: students#ask
 Output:
 {
   id,
