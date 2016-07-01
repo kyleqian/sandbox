@@ -23,9 +23,11 @@ Relationships
 
   Teacher belongs to School
   Teacher has many StudentTeacherPairs
+  Teacher has many Students through StudentTeacherPairs
 
   Student belongs to School
   Student has many StudentTeacherPairs
+  Student has many Teachers through StudentTeacherPairs
   Student has one StudentRecord
 
   StudentRecord belongs to Student
