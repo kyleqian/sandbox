@@ -6,6 +6,7 @@ StudentRecord - the academic record of a particular student
 
 
 1)
+Volunteer: Kyle Qian
 Model: School
 Type: constant(s)
 Description: Constant for credits needed to graduate
@@ -14,6 +15,7 @@ CREDITS_FOR_GRADUATION = 180
 
 
 2)
+Volunteer: Kyle Qian
 Model: School
 Type: class method
 Attribute name: credits_for_standing
@@ -23,6 +25,7 @@ Description: Given a class standing, returns number of credits required to be of
 
 
 3)
+Volunteer: David Lee
 Model: Student
 Type: instance method
 Attribute name: can_graduate
@@ -32,6 +35,7 @@ Description: Whether the particular student has enough credits to graduate from 
 
 
 4)
+Volunteer: David Lee
 Model: Student
 Type: instance method
 Attribute name: teachers_who_teach_math
