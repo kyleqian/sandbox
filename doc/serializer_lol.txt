@@ -6,14 +6,14 @@ Output:
   id,
   name,
   subject,
-  school -> {
+  school: {
     id,
     name
   },
-  students -> [
+  students: [
     id,
     name
-  [
+  ]
 ]
 
 
@@ -25,5 +25,5 @@ Output:
   id,
   name,
   year,
-  can_graduate?
+  *can_graduate? (whether the student has enough credits to graduate)
 }
