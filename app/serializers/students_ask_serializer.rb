@@ -1,4 +1,4 @@
-class StudentAskSerializer < ActiveModel::Serializer
+class StudentsAskSerializer < ActiveModel::Serializer
   attributes :id, :name, :year, :can_graduate?
 
   def can_graduate?

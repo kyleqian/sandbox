@@ -1,7 +1,7 @@
 1)
 Volunteer: Kyle Qian
 Action: teachers#index
-Output:
+Output format:
 [
   id,
   name,
@@ -20,7 +20,7 @@ Output:
 2)
 Volunteer: David Lee
 Action: students#ask
-Output:
+Output format:
 {
   id,
   name,
