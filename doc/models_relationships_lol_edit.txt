@@ -18,20 +18,20 @@ Models
   StudentTeacherPair
 
 Relationships
-  School has many Teachers
-  School has many Students
+  School has many Teachers XX
+  School has many Students XX
 
-  Teacher belongs to School
-  Teacher has many StudentTeacherPairs
+  Teacher belongs to School XX
+  Teacher has many StudentTeacherPairs XX
   Teacher has many Students through StudentTeacherPairs
 
-  Student belongs to School
-  Student has many StudentTeacherPairs
+  Student belongs to School XX
+  Student has many StudentTeacherPairs XX
   Student has many Teachers through StudentTeacherPairs
   Student has one StudentRecord
 
   StudentRecord belongs to Student
 
   (join table)
-  StudentTeacherPair belongs to Student
-  StudentTeacherPair belongs to Teacher
+  StudentTeacherPair belongs to Student XX
+  StudentTeacherPair belongs to Teacher XX
