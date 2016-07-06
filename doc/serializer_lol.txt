@@ -1,8 +1,9 @@
 1)
 Volunteer: Kyle Qian
 Action: teachers#index
+Type: Array
 Output format:
-[
+{
   id,
   name,
   subject,
@@ -14,12 +15,13 @@ Output format:
     id,
     name
   ]
-]
+}
 
 
 2)
 Volunteer: David Lee
-Action: students#ask
+Action: students#submit
+Type: Object
 Output format:
 {
   id,
