@@ -27,5 +27,5 @@ Output format:
   id,
   name,
   year,
-  *can_graduate? (whether the student has enough credits to graduate)
+  * can_graduate? (whether the student has enough credits to graduate)
 }
