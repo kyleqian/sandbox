@@ -9,6 +9,7 @@ Models
   Student
     name - string
     year - integer
+    (can_graduate - boolean - method)
 
   StudentRecord
     comments - text
