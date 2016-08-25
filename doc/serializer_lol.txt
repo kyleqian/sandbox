@@ -1,31 +1,9 @@
+Go to [http://editor.swagger.io/#/] and drag doc/json_api.yaml onto the page to view the complete API documentation.
+
 1)
 Volunteer: Kyle Qian
 Action: teachers#index
-Type: Array
-Output format:
-{
-  id,
-  name,
-  subject,
-  school: {
-    id,
-    name
-  },
-  students: [
-    id,
-    name
-  ]
-}
-
 
 2)
 Volunteer: David Lee
 Action: students#submit
-Type: Object
-Output format:
-{
-  id,
-  name,
-  year,
-  * can_graduate? (whether the student has enough credits to graduate)
-}

@@ -1,0 +1,81 @@
+swagger: "2.0"
+info:
+  title: Sandbox
+  version: "1.0"
+paths:
+  /teachers:
+    get:
+      description: List of all teachers
+      tags:
+        - Teacher
+      responses:
+        "200":
+          description: Successfully got teachers
+          schema:
+            type: object
+            properties:
+              teachers:
+                description: List of teachers
+                type: array
+                items:
+                  properties:
+                    id:
+                      description: Teacher ID
+                      type: integer
+                    name:
+                      description: Teacher name
+                      type: string
+                    subject:
+                      description: Teacher subject
+                      type: string
+                    school:
+                      description: School to which the teacher belongs
+                      type: object
+                      properties:
+                        id:
+                          description: School ID
+                          type: integer
+                        name:
+                          description: School name
+                          type: string
+                    students:
+                      description: Students of teacher
+                      type: array
+                      items:
+                        properties:
+                          id:
+                            description: Student ID
+                            type: integer
+                          name:
+                            description: Student name
+                            type: string
+
+  /students/{student_id}/submit:
+    put:
+      description: Students submit
+      tags:
+        - Student
+      parameters:
+        - name: student_id
+          in: path
+          required: true
+          description: Student ID
+          type: integer
+      responses:
+        "201":
+          description: Successfull submitted
+          schema:
+            type: object
+            properties:
+              id:
+                description: Student ID
+                type: integer
+              name:
+                description: Student name
+                type: string
+              year:
+                description: Student year
+                type: integer
+              can_graduate?:
+                description: Whether the student can graduate
+                type: boolean
