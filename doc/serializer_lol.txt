@@ -2,8 +2,10 @@ Go to [http://editor.swagger.io/#/] and drag doc/json_api.yaml onto the page to 
 
 1)
 Volunteer: Kyle Qian
+Route: GET /teachers 
 Action: teachers#index
 
 2)
 Volunteer: David Lee
+Route: PUT /students/{student_id}/submit
 Action: students#submit
