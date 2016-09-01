@@ -38,6 +38,6 @@ class StudentsController < ApplicationController
   def submit
     student = Student.find(params[:id])
     MainMailer.send_submission(params[:content]).deliver_now
-    render json: student, serializer: StudentSubmitSerializer
+    render json: StudentSubmitSerializer.new(student)
   end
 end
