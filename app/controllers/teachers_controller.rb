@@ -6,7 +6,7 @@ class TeachersController < ApplicationController
 
   def index
     json_data = {
-      teachers: JSON.parse(ActiveModel::Serializer::CollectionSerializer.new(Teacher.all, serializer: TeachersIndexSerializer).to_json)
+      teachers: JSON.parse(ActiveModel::Serializer::CollectionSerializer.new(Teacher.all, serializer: TeachersIndexTeachersSerializer).to_json)
     }
     render json: json_data
   end
