@@ -1,11 +1,13 @@
 class TeachersController < ApplicationController
   def show
     teacher = Teacher.find(params[:id])
-    render json: teacher, serializer: TeacherShowSerializer
+    render json: TeachersShowSerializer.new(teacher)
   end
 
   def index
-    teachers = Teacher.all
-    render json: teachers, each_serializer: TeacherIndexSerializer
+    json_data = {
+      teachers: JSON.parse(ActiveModel::Serializer::CollectionSerializer.new(Teacher.all, serializer: TeachersIndexSerializer).to_json)
+    }
+    render json: json_data
   end
 end
