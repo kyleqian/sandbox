@@ -1,75 +1,20 @@
 1)
 Volunteer: Kyle Qian
-Action: teachers#show
-Route: GET /teachers/:id
-Description: Get the specified teacher
-Input:
-(ID from URL)
-Output:
-{teacher object} - TeacherShowSerializer
+Route: POST /students
+Action: students#create
+Function: This creates a new student. We want to 1)create a new student object and 2)create an associated student_record object.
 
 
 2)
 Volunteer: Kyle Qian
-Action: teachers#index
-Route: GET /teachers 
-Description: Get all teachers
-Output:
-[teacher objects] - TeacherIndexSerializer
+Route: DELETE /students/:id
+Action: students#destroy
+Function: We want to 1)delete the specified student object, 2)delete the associated student_record, and 3)delete any associated student_teacher_pairs.
 
 
 3)
-Volunteer: Kyle Qian
-Action: students#create
-Route: POST /students
-Description: School gets a new student
-Function: 1) Create a new student object and 2) create an associated student_record object
-Input:
-{
-  "school_id": (integer),
-  "student_name": (string),
-  "student_year": (integer)
-}
-Output:
-If success:
-{
-  "succeeded": true
-}
-If failed:
-{
-  "succeeded": false
-}
-
-
-4)
-Volunteer: Kyle Qian
-Action: students#destroy
-Route: DELETE /students/:id
-Description: Student leaves a school
-Function: 1) Delete the specified student object, 2) delete the associated student_record, and 3) delete any associated student_teacher_pairs
-Input:
-(ID from URL)
-Output:
-If success:
-{
-  "succeeded": true
-}
-If failed:
-{
-  "succeeded": false
-}
-
-
-5)
 Volunteer: David Lee
-Action: students#submit
 Route: PUT /students/:id/submit
-Description: Student sends an email
-Function: Send an email with the send_submission action of main_mailer (deliver_now)
-Input:
-(ID from URL)
-{
-  "content": (string)
-}
-Output:
-{student object} - StudentSubmitSerializer
+Action: students#submit
+Function: We want to send an email with the send_submission action of main_mailer (deliver_now).
+

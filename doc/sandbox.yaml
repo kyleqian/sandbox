@@ -79,3 +79,43 @@ paths:
               can_graduate?:
                 description: Whether the student can graduate
                 type: boolean
+
+  /students:
+    post:
+      description: Create a new student
+      tags:
+        - Student
+      parameters:
+        - name: body
+          in: body
+          required: true
+          schema:
+            type: object
+            properties:
+              school_id:
+                description: ID of school the student belongs to
+                type: integer
+              name:
+                description: Name of the student
+                type: string
+              year:
+                description: Which year the student is in
+                type: integer
+      responses:
+        "201":
+          description: Successfully created student
+
+  /students/{student_id}:
+    delete:
+      description: Delete a student
+      tags:
+        - Student
+      parameters:
+        - name: student_id
+          in: path
+          required: true
+          description: Student ID
+          type: integer
+      responses:
+        "201":
+          description: Successfully deleted student
