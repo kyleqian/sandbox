@@ -6,14 +6,16 @@ class StudentsController < ApplicationController
   end
 
   def create
-    student = Student.create(name: params[:student_name], year: params[:student_year], school_id: params[:school_id])
+    student = Student.new(name: params[:student_name], year: params[:student_year], school_id: params[:school_id])
     if !student.valid?
       render json: {succeeded: false}
     else
-      student.student_record = StudentRecord.create
+      student.student_record = StudentRecord.new
       if !student.student_record.valid?
         render json: {succeeded: false}
       else
+        student.save!
+        student.student_record.save!
         render json: {succeeded: true}
       end
     end
@@ -37,6 +39,9 @@ class StudentsController < ApplicationController
 
   def submit
     student = Student.find(params[:id])
+    if !student
+      render json: {succeeded: false}
+    end
     MainMailer.send_submission(params[:content]).deliver_now
     render json: StudentSubmitSerializer.new(student)
   end
